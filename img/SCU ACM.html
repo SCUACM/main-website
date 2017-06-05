@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/join.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>SCU ACM</title>
+    <meta charset="UTF-8">
+    <title>Events</title>   
+    <link rel="stylesheet" type="text/css" href="./SCU ACM_files/bootstrap.css">
+    <script src="./SCU ACM_files/jquery.min.js"></script>
+    <script src="./SCU ACM_files/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/css/bits.css">
+    <link rel="stylesheet" href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/css/reset.css">
+    <link rel="stylesheet" href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/css/joinstyle.css"> 
+  </head>
+  <body>
+  <canvas id="canvas" width="2826" height="1009"></canvas>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+      <div class="container-fluid">
+         <div class="navbar-header">  
+          <p id="name">ACM</p>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                         
+            </button> 
+          </div>
+         <nav class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">  
+            <li><a href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/index.html">Home</a></li>
+            <li><a href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/board.html">Board</a></li>
+            <li><a href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/events.html">Events</a></li>
+            <li><a href="./SCU ACM_files/SCU ACM.html">Join</a></li>
+            <li><a href="file:///Users/taylorpiggy/Desktop/web%20stuff/ACM%20Website/particles-js-demo/pay.html">Pay</a></li>
+            </ul>
+          </nav>
+      </div>
+    </nav>
+    <form onsubmit="return checkCheckBoxes(this);">
+      <h1>Join our email list</h1>
+      <div class="alert alert-danger" role="alert">
+        <span><img src="./SCU ACM_files/error.png" id="error"></span>
+        <span class="sr-only">Error:</span>
+        Enter a valid email address
+      </div>
+      <input id="email" placeholder="email" type="email" required="">
+      <table style="width:100%">
+        <tbody><tr>
+            <td>
+              <span class="checlbox.text"><input type="checkbox" name="Club1" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACM<br></span>
+            </td>
+            <td>
+             <span class="checlbox.text"><input type="checkbox" name="Club2" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACM-W<br></span>
+            </td>
+        </tr>
+      </tbody></table>
+      <button>Submit</button>
+    </form> 
+    <link rel="stylesheet" href="file://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="./SCU ACM_files/css" rel="stylesheet" type="text/css">
+    <script src="./SCU ACM_files/bits.js"></script>
+    <script type="text/javascript">
+      function checkCheckBoxes(theForm) {
+        if (
+        theForm.Club1.checked == false &&
+        theForm.Club2.checked == false) 
+        {
+          $('.alert').css({'display': ' '});
+          // alert ('You didn\'t choose any of the checkboxes!');
+          return false;
+        } 
+        else {  
+          return true;
+        }
+      }
+</script>
+    
+  
+
+</body></html>

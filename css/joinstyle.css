@@ -1,0 +1,291 @@
+html {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  color: #fff !important;
+  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+
+/* -------------------- Paperclip Body --------------------*/
+.paper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*background: #b2ddcb;*/
+  width: 96%;
+  z-index: 4;
+  top:150px;
+  margin-left: 2.5%;
+}
+.paper2 {
+  /*background: #a5cdbc;*/
+  -webkit-transform: rotate(0.5deg);
+  -ms-transform: rotate(0.5deg);
+  transform: rotate(0.5deg);
+  z-index: 3;
+  animation: paper 2s;
+  height:20px;
+}
+.paper3 {
+  /*background: #97c0af;*/
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+  z-index: 2;
+  animation: paper1 2s;
+  height:20px;
+}
+.paper-clip-icon,
+.paper-clip-icon::after,
+.paper-clip-icon::before {
+  border-color: #fff !important;
+}
+
+.paper-clip-icon {
+  margin-top: -40px;
+  width: 60px;
+  height: 40px;
+  border-bottom: none;
+  border-left: 6px solid;
+  border-right: 6px solid;
+  border-top: none;
+  position: absolute;
+  z-index: 5;
+  top:150px;
+/*  margin-left: 50%;*/
+}
+
+.paper-clip-icon::before {
+  position: absolute;
+  content: "";
+  top: -30px;
+  right: -6px;
+  width: 41px;
+  height: 60px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom: none;
+  border-left: 6px solid;
+  border-right: 6px solid;
+  border-top: 6px solid;
+}
+
+.paper-clip-icon::after {
+  position: absolute;
+  content: "";
+  bottom: -80px;
+  right: 5px;
+  width: 30px;
+  height: 104px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top: none;
+  border-left: 6px solid;
+  border-right: 6px solid;
+  border-bottom: 6px solid;
+}
+#name{
+  padding: 15px;
+  font-size: 15px;
+  position: absolute;
+  color: #000;
+}
+@media (min-width: 768px){#name{
+  color: #fff;
+  }}
+  html {
+  width: 100%;
+  background: #232a35;
+}
+h1{
+  margin-left: 5%
+}
+#wrapper{
+  bottom: 0;
+  left: 0;
+  background: #18b69a;
+  width: 87%;
+  z-index: 4;
+  top:300px;
+  margin: auto;
+}
+#wrapper2 {
+  bottom: 0;
+  left: 0;
+  width: 87%;
+  top:300px;
+  background-color: #159f87;
+  transform: rotate(0.5deg);
+  z-index: 3;
+  height:20px;
+  animation: wrapper 2s;
+  margin: auto;
+}
+#wrapper3 {
+  bottom: 0;
+  left: 0;
+  width: 87%;
+  top:300px;
+  background-color: #128974;
+  transform: rotate(1deg);
+  z-index: 2;
+  height:20px;
+  animation: wrapper1 2s;
+  margin: auto;
+}
+@-webkit-keyframes wrapper {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0.5deg);
+    -ms-transform: rotate(0.5deg);
+    transform: rotate(0.5deg);
+  }
+}
+@keyframes wrapper {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0.5deg);
+    -ms-transform: rotate(0.5deg);
+    transform: rotate(0.5deg);;
+  }
+}
+
+@-webkit-keyframes wrapper {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+}
+@keyframes wrapper {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+}
+.img {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  height:250px;
+  top:400px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 125px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.Club_name {
+  font-weight: 800;
+  text-align: center;
+  margin-top: 125px;
+  margin-bottom: 25px;
+  font-size: 340%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*.navbar{
+  background-color: #0E5C28 !important;
+}*/
+
+
+
+
+.profile{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  text-align: left;
+}
+.prof-pic{
+  width: 80%; max-width: 300px;
+  height: auto !important;
+}
+.prof-title{
+  margin-top: 5px;
+  font-style: italic;
+  line-height: 120%;
+  text-align: center;
+  font-size: 120%;
+}
+.prof-line{
+  margin-top: 0; margin-bottom: 10px;
+}
+.email-link{
+  transition: color 0.5s ease, text-decoration 0.5s ease;  
+  color: #FFF;
+  text-decoration: none;
+  font-size: 115%;
+  font-weight: 300;
+
+}
+.email-link:hover{
+  color: #232a35;
+  text-decoration: none;
+}
+.prof-bio{
+  font-size: 90%;
+}
+.title-divider{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 930px){
+  .prof-title{
+    margin-top: 5px;
+    font-style: italic;
+    line-height: 120%;
+    text-align: center;
+    font-size: 135%;
+  }
+
+}
+
+
+/* profiles get a bit too thin between the 768 to 930 px range 
+  so adjusting padding for more breathing room */
+@media (min-width: 768px) and (max-width: 930px){
+  .profile{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    text-align: left;
+  }
+}
