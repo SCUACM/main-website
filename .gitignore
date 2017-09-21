@@ -1,6 +1,18 @@
+# Ignore all dotfiles except this file.
 .*
 !/.gitignore
+
+# Ignore custom.
 other/
-Desktop/
-Library/
 couch/
+
+# Ignore user directories.
+Desktop/
+Documents/
+Downloads/
+Library/
+Music/
+Pictures/
+Public/
+Templates/
+Videos/
