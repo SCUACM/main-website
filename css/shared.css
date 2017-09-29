@@ -309,3 +309,12 @@ h1 {
 	color: #232a35;
 	text-decoration: none;
 }
+
+a.white {
+	color: white;
+}
+
+a.white:hover {
+	color: white;
+	text-decoration: none;
+}

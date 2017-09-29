@@ -4,28 +4,24 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-		<title>Santa Clara ACM</title>
-
-		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/css/index.css">
+		<title>About ACM</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" type="text/css" href="/css/shared.css">
+		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
 
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
-		<script type="text/javascript" src="/js/vendor/particles.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
 	</head>
 	<body>
-		<div id="particles-js"></div>
-		<script type="text/javascript" src="/js/particles.js"></script>
-
-		<header class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
-			<div class="container-fluid" id="acm-navbar">
+		<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+			<div class="container-fluid">
 				<div class="navbar-header">
-					<p id="name"><a href="/" class="white">ACM</a></p>
+				    <p id="name"><a href="/" class="white">ACM</a></p>
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -34,8 +30,8 @@
 				</div>
 				<nav class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-					     <li><a href="/about">About</a></li>
-					    	<li><a href="/board">Board</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/board">Board</a></li>
 						<li><a href="/events">Events</a></li>
 						<li><a href="/resources">Resources</a></li>
 						<li><a href="/join">Join</a></li>
@@ -43,16 +39,39 @@
 					</ul>
 				</nav>
 			</div>
-		</header>
+		</nav>
 
-		<div id="break"></div>
+		<div class="paper-clip-icon"></div>
 
-		<div id="text">
-			<h1>ACM</h1>
-			<hr id="dank-line">
-			<p id ="def">Association for Computing Machinery</p>
-			<p id="def2">Join the best and the brightest in tech at Santa Clara University</p>
-			<p id="info">Meetings every Tuesday 5:30 PM in ENGR 326</p>
+		<div class="paper">
+			<!-- Calendar -->
+			<div id="wrapper">
+				<div class="container-fluid">
+					<div id="bumper"></div>
+					<h1 class="Club_name">Resources</h1>
+					<hr class="title-divider">
+					<div class="row">
+						<div class="col-sm-12 profile">
+							<p> Stay tuned for updates to this page! </p>
+						</div>
+					</div>
+					<br>
+					<br>
+				</div>
+			</div>
 		</div>
+
+		<!-- Paperclip and spare pages -->
+		<div class="paper paper2">
+			<div id="wrapper2">
+			</div>
+		</div>
+
+		<div class="paper paper3">
+			<div id="wrapper3">
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
 </html>
