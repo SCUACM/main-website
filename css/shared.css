@@ -318,3 +318,17 @@ a.white:hover {
 	color: white;
 	text-decoration: none;
 }
+
+ul {
+	list-style-type: none;
+}
+
+.connect-bubble {
+	color: white;
+	text-decoration: none;
+}
+
+.about-pic {
+	width: 100%;
+	max-width: 300px;
+}
