@@ -65,8 +65,6 @@
 			</div>
 		</nav>
 
-		<div class="paper-clip-icon"></div>
-
 		<div class="paper">
 			<div id="wrapper">
 				<!-- ACM Board -->
@@ -157,17 +155,6 @@
 					</cms:pages>
 				</div>
 
-			</div>
-		</div>
-
-		<!-- Paperclip and spare pages -->
-		<div class="paper paper2">
-			<div id="wrapper2">
-			</div>
-		</div>
-
-		<div class="paper paper3">
-			<div id="wrapper3">
 			</div>
 		</div>
 

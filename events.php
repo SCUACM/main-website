@@ -51,8 +51,6 @@
 			</div>
 		</nav>
 
-		<div class="paper-clip-icon"></div>
-
 		<div class="paper">
 			<!-- Calendar -->
 			<div id="wrapper">
@@ -220,16 +218,6 @@
 					<br>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<!-- Paperclip and spare pages -->
-		<div class="paper paper2">
-			<div id="wrapper2">
-			</div>
-		</div>
-		<div class="paper paper3">
-			<div id="wrapper3">
 			</div>
 		</div>
 
