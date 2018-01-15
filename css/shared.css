@@ -51,6 +51,11 @@ h1 {
 	margin-left: 5%;
 }
 
+h2 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 #wrapper {
 	bottom: 0;
 	left: 0;
@@ -176,11 +181,17 @@ ul {
 }
 
 .connect-bubble {
-	color: white;
-	text-decoration: none;
+	width: 100%;
+	max-width: 80px;
 }
 
 .about-pic {
 	width: 100%;
 	max-width: 300px;
+}
+
+.about-header {
+	width: 100%;
+	max-width: 700px;
+	margin-bottom: 10px;
 }
