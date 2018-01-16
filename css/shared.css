@@ -167,15 +167,6 @@ h1 {
 	text-decoration: none;
 }
 
-a.white {
-	color: white;
-}
-
-a.white:hover {
-	color: white;
-	text-decoration: none;
-}
-
 ul {
 	list-style-type: none;
 }

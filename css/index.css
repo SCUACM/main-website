@@ -170,13 +170,3 @@ h1 {
 		color: #fff;
 	}
 }
-
-
-a.white {
-	color: white;
-}
-
-a.white:hover {
-	color: white;
-	text-decoration: none;
-}
