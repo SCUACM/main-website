@@ -172,8 +172,20 @@ ul {
 }
 
 .connect-bubble {
+	width: 60px;
+	margin-left: 2%;
+	margin-right: 2%;
+	display: inline-block;
+}
+
+.connect-bubble > a > img {
 	width: 100%;
-	max-width: 80px;
+}
+
+@media (max-width: 768px) {
+	.connect-bubble {
+		width: 40px;
+	}
 }
 
 .about-pic {
