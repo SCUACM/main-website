@@ -17,7 +17,7 @@ body {
 	font-family: 'Open Sans', sans-serif !important;
 }
 
-/* -------------------- Paperclip Body --------------------*/
+/* -------------------- Paper Body --------------------*/
 
 .paper {
 	position: absolute;
@@ -25,73 +25,8 @@ body {
 	left: 0;
 	width: 96%;
 	z-index: 4;
-	top: 150px;
+	top: 75px;
 	margin-left: 2.5%;
-}
-
-.paper2 {
-	-webkit-transform: rotate(0.5deg);
-	-ms-transform: rotate(0.5deg);
-	transform: rotate(0.5deg);
-	z-index: 3;
-	animation: paper 2s;
-	height: 20px;
-}
-
-.paper3 {
-	-webkit-transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	transform: rotate(1deg);
-	z-index: 2;
-	animation: paper1 2s;
-	height: 20px;
-}
-
-.paper-clip-icon, .paper-clip-icon::after, .paper-clip-icon::before {
-	border-color: #fff !important;
-}
-
-.paper-clip-icon {
-	margin-top: -40px;
-	width: 60px;
-	height: 40px;
-	border-bottom: none;
-	border-left: 6px solid;
-	border-right: 6px solid;
-	border-top: none;
-	position: absolute;
-	z-index: 5;
-	top: 150px;
-}
-
-.paper-clip-icon::before {
-	position: absolute;
-	content: "";
-	top: -30px;
-	right: -6px;
-	width: 41px;
-	height: 60px;
-	border-top-left-radius: 40px;
-	border-top-right-radius: 40px;
-	border-bottom: none;
-	border-left: 6px solid;
-	border-right: 6px solid;
-	border-top: 6px solid;
-}
-
-.paper-clip-icon::after {
-	position: absolute;
-	content: "";
-	bottom: -80px;
-	right: 5px;
-	width: 30px;
-	height: 104px;
-	border-bottom-left-radius: 40px;
-	border-bottom-right-radius: 40px;
-	border-top: none;
-	border-left: 6px solid;
-	border-right: 6px solid;
-	border-bottom: 6px solid;
 }
 
 #name {
@@ -116,6 +51,11 @@ h1 {
 	margin-left: 5%;
 }
 
+h2 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 #wrapper {
 	bottom: 0;
 	left: 0;
@@ -124,89 +64,6 @@ h1 {
 	z-index: 4;
 	top: 300px;
 	margin: auto;
-}
-
-#wrapper2 {
-	bottom: 0;
-	left: 0;
-	width: 87%;
-	top: 300px;
-	background-color: #159f87;
-	transform: rotate(0.5deg);
-	z-index: 3;
-	height: 20px;
-	animation: wrapper 2s;
-	margin: auto;
-	animation-fill-mode: forwards;
-}
-
-#wrapper3 {
-	bottom: 0;
-	left: 0;
-	width: 87%;
-	top: 300px;
-	background-color: #128974;
-	transform: rotate(1deg);
-	z-index: 2;
-	height: 20px;
-	animation: wrapper1 2s;
-	margin: auto;
-}
-
-@-webkit-keyframes wrapper {
-	0% {
-		-webkit-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(0.5deg);
-		-ms-transform: rotate(0.5deg);
-		transform: rotate(0.5deg);
-	}
-}
-
-@keyframes wrapper {
-	0% {
-		-webkit-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(0.5deg);
-		-ms-transform: rotate(0.5deg);
-		transform: rotate(0.5deg);
-	}
-}
-
-@-webkit-keyframes wrapper {
-	0% {
-		-webkit-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(1deg);
-		-ms-transform: rotate(1deg);
-		transform: rotate(1deg);
-	}
-}
-
-@keyframes wrapper {
-	0% {
-		-webkit-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(1deg);
-		-ms-transform: rotate(1deg);
-		transform: rotate(1deg);
-	}
 }
 
 .img {
@@ -230,7 +87,7 @@ h1 {
 .Club_name {
 	font-weight: 800;
 	text-align: center;
-	margin-top: 125px;
+	margin-top: 70px;
 	margin-bottom: 25px;
 	font-size: 340%;
 }
@@ -310,25 +167,22 @@ h1 {
 	text-decoration: none;
 }
 
-a.white {
-	color: white;
-}
-
-a.white:hover {
-	color: white;
-	text-decoration: none;
-}
-
 ul {
 	list-style-type: none;
 }
 
 .connect-bubble {
-	color: white;
-	text-decoration: none;
+	width: 100%;
+	max-width: 80px;
 }
 
 .about-pic {
 	width: 100%;
 	max-width: 300px;
+}
+
+.about-header {
+	width: 100%;
+	max-width: 700px;
+	margin-bottom: 10px;
 }
