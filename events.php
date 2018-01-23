@@ -1,3 +1,17 @@
+<?php require_once('./couch/cms.php'); ?>
+
+<cms:template title='Events' clonable='1'>
+		<cms:editable name='title' type='text' />
+		<cms:editable name='datestr' type='text' />
+		<cms:editable name='image' type='image' />
+		<cms:editable name='description' type='richtext' />
+
+		<cms:folder name="2015" title="2015" />
+		<cms:folder name="2016" title="2016" />
+		<cms:folder name="2017" title="2017" />
+		<cms:folder name="2018" title="2018" />
+</cms:template>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,8 +53,8 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-left">
-                        <li><a href="/">ACM</a></li>
-                    </ul>
+						<li><a href="/">ACM</a></li>
+					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/about">About</a></li>
 						<li><a href="/board">Board</a></li>
@@ -72,157 +86,41 @@
 				</div>
 			</div>
 
-			<!-- 2017 Events -->
-			<div id="wrapper">
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">2017 Events</h1>
-					<hr class="title-divider">
-					<div class="row">
-
-					</div>
-					<br>
-					<br>
-				</div>
-			</div>
-
-			<!-- 2016 Events -->
-			<div id="wrapper">
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">2016 Events</h1>
-					<hr class="title-divider">
-					<div class="row">
-						<div class="col-sm-6 profile">
-							<center><img src="img/hackForHumanity.jpg" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>February 27th-28th, 2016</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">ACM&#39;s annual Hack for Humanity was 24 hours of code, food, and collaboration. Sponsored by Village Tech Solutions, attendees were given the opportunity to develop with the Looma -- a portable computer and projector box designed for use in classrooms of developing nations. You can check out our website for the hackathon <a href="http://www.hackforhumanity.io/">here!</a></p>
-						<br>
-						<br>
-						</div>
-						<div class="col-sm-6 profile">
-							<center><img src="img/Android.png" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>February 20th, 2016</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">ACM's Android Tutorial taught our members how to get started with Android Development by first creating a simple checklist application! Our very own Alex Cholous led the instruction and we had a great turnout of almost 30 members!</p>
-						<br>
-						<br>
-						</div>
+			<cms:folders masterpage="events.php" order="desc" exclude="2018">
+				<div id="wrapper">
+					<div class="container-fluid">
+						<div id="bumper"></div>
+						<h1 class="Club_name"><cms:show k_folder_name /> Events</h1>
+						<hr class="title-divider">
+						<cms:pages masterpage="events.php" folder=k_folder_name>
+							<cms:set eventnum = "<cms:mod k_count '2' />" />
+							<cms:if eventnum == '1'>
+								<div class="row">
+							</cms:if>
+							<div class="col-sm-6 profile">
+								<center><img src="<cms:show image />" class="prof-pic" style="height:250px"></center>
+								<p class="prof-title">
+									<i>
+										<b><cms:show datestr />, <cms:show k_folder_name /></b>
+										<br>
+									</i>
+								</p>
+								<hr class="prof-line">
+								<p class="prof-bio-center"><cms:show description /></p>
+								<br>
+								<br>
+							</div>
+							<cms:if (eventnum == '0') || (k_count == k_total_records)>
+								</div>
+							</cms:if>
+						</cms:pages>
 					</div>
 				</div>
-			</div>
-
-			<!-- 2015 Events -->
-			<div id="wrapper">
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">2015 Events</h1>
-					<hr class="title-divider">
-					<div class="row">
-						<div class="col-sm-6 profile">
-							<center><img src="img/makerfaire.jpg" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>May 16th, 2015</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">ACM and Maker Club attended the Maker Faire at the San Mateo Convention Center. It was a day filled with excitement and surprises as our club members were able to find some amazing devices at the convention!</p>
-						<br>
-						<br>
-						</div>
-						<div class="col-sm-6 profile">
-							<center><img src="img/h4h.jpg" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>April 27, 2015</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">Hack for the Homeless. SCU&#39;s 24 hours hackathon for social good - specifically for those who are currently homeless. Those 24 hours required some intensive coding, a couple of energy drinks, a good amount of teamwork, and a lot of food. We appreciate everyone who participated! </p>
-						<br>
-						<br>
-						</div>
-					<br>
-					<br>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 profile">
-							<center><img src="img/Brocade.png" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>April 9th, 2015</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">ACM&#39;s Brocade tour! On Thursday, April 9th, ACM visited Brocade - a network provider for data centers. Our members were able to take a peek into the workdays of some software engineers in the industry, and also speak to some recruiters!</p>
-						<br>
-						<br>
-						</div>
-						<div class="col-sm-6 profile">
-							<center><img src="img/Cisco.png" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>March 6, 2015</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">Cisco Tour! ACM and SHPE received the opportuninity to tour Cisco and take take a look inside one of the industry's leading companies in IT solutions. </p>
-						<br>
-						<br>
-						</div>
-					<br>
-					<br>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 profile">
-							<center><img src="img/imitationgame.jpg" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>January 16, 2015</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">ACM goes to AMC! On Friday April 9th, ACM members enjoyed some In N Out before going to see the Imitation Game! </p>
-						<br>
-						<br>
-						</div>
-						<div class="col-sm-6 profile">
-							<center><img src="img/Googletalk.png" class="prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i>
-									<b>December 1, 2014</b>
-									<br>
-								</i>
-							</p>
-							<hr class="prof-line">
-							<p class="prof-bio center">Join us for a presentation on, "Laying the Groundwork for your Technical Career," given by Google&#39;s Director of Games! We&#39;ll sit down for a conversation on career opportunities and technologies that you may be interested. Google swag provided.</p>
-						<br>
-						<br>
-						</div>
-					<br>
-					<br>
-					</div>
-				</div>
-			</div>
+			</cms:folders>
 		</div>
 
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
 </html>
+
+<?php COUCH::invoke();
