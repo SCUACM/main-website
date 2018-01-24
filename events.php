@@ -33,13 +33,20 @@
 
 		<link rel="stylesheet" type="text/css" href="css/shared.css">
 		<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.min.css">
+		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.print.min.css" media="print">
+		<link rel="stylesheet" type="text/css" href="fullcal/calendar.css">
 
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
+		<script type="text/javascript" src="/js/vendor/moment.min.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
+		<script type="text/javascript" src="fullcal/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="fullcal/gcal.min.js"></script>
+		<script type="text/javascript" src="fullcal/init-cal.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
@@ -69,22 +76,8 @@
 
 		<div class="paper">
 			<!-- Calendar -->
-			<div id="wrapper">
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">Calendar</h1>
-					<hr class="title-divider">
-					<div class="row">
-						<div class="col-sm-12 profile">
-							<center>
-								<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=santaclara.acm%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-							</center>
-						</div>
-					</div>
-					<br>
-					<br>
-				</div>
-			</div>
+			<div id='loading'>loading...</div>
+			<div id="calendar"></div>
 
 			<cms:folders masterpage="events.php" order="desc" exclude="2018">
 				<div id="wrapper">
