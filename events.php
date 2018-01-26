@@ -76,8 +76,24 @@
 
 		<div class="paper">
 			<!-- Calendar -->
-			<div id='loading'>loading...</div>
-			<div id="calendar"></div>
+			<!-- Calendar -->
+			<div id="wrapper">
+				<div class="container-fluid">
+					<div id="bumper"></div>
+					<h1 class="Club_name">Calendar</h1>
+					<hr class="title-divider">
+					<div class="row">
+						<div class="col-sm-12 profile">
+							<center>
+								<div id='loading'>loading...</div>
+								<div id="calendar"></div>
+							</center>
+						</div>
+					</div>
+					<br>
+					<br>
+				</div>
+			</div>
 
 			<cms:folders masterpage="events.php" order="desc" exclude="2018">
 				<div id="wrapper">

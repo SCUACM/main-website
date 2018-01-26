@@ -6,7 +6,12 @@
 }
 
 #calendar {
+  color: #000;
   width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.fc-view-container {
+  background: #fff;
 }
