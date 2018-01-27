@@ -6,7 +6,7 @@
 }
 
 #calendar {
-  color: black;
+  color: #222;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -17,11 +17,11 @@
 }
 
 .fc-view-container {
-  background: white;
+  background: #fefefe;
 }
 
-.fc-day-header {
-  color: black;
+.fc-day-header > a {
+  color: #222;
 }
 
 .fc-minor > .fc-widget-content {
@@ -37,7 +37,7 @@
 }
 
 .fc-day-number {
-  color: black;
+  color: #222;
 }
 
 .fc-event {
