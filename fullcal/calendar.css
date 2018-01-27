@@ -6,12 +6,36 @@
 }
 
 #calendar {
-  color: #000;
+  color: black;
   width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
+.fc-view > table {
+  width: 100%;
+}
+
 .fc-view-container {
-  background: #fff;
+  background: white;
+}
+
+.fc-widget-header {
+  color: black;
+}
+
+.fc-minor > .fc-widget-content {
+  border: 0;
+}
+
+.fc-time {
+  border: 0;
+}
+
+.fc-day-number {
+  color: black;
+}
+
+.fc-center {
+  color: white;
 }
