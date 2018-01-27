@@ -36,14 +36,11 @@ $(document).ready(function() {
 	},
 
 	views: {
-		month: {
-
-		},
 		agendaWeek: {
 			titleFormat: 'MMMM YYYY',
-			columnFormat: 'ddd D',
+			columnFormat: 'ddd D'
 		}
-	}
+	},
 
 	loading: function(bool) {
 		$('#loading').toggle(bool);
