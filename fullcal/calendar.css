@@ -42,6 +42,8 @@
 
 .fc-event {
   border-radius: 2px;
+  border-color: transparent;
+  margin-bottom: 1px;
 }
 
 .fc-center {
