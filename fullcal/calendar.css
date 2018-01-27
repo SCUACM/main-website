@@ -43,6 +43,7 @@
 }
 
 .fc-content {
+  white-space: normal;
   height: 100%;
 }
 
