@@ -34,7 +34,6 @@
 		<link rel="stylesheet" type="text/css" href="css/shared.css">
 		<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.min.css">
-		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.print.min.css" media="print">
 		<link rel="stylesheet" type="text/css" href="fullcal/calendar.css">
 
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">

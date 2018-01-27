@@ -36,6 +36,16 @@
   border: 0;
 }
 
+.fc-day-grid-event {
+  white-space: normal;
+  overflow: hidden;
+  height: 32px;
+}
+
+.fc-content {
+  height: 100%;
+}
+
 .fc-day-number {
   color: #222;
 }

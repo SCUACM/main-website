@@ -7,11 +7,10 @@ $(document).ready(function() {
 	  center: 'title',
 	  right: 'agendaWeek,month'
 	},
-
+	defaultView: 'agendaWeek',
 	minTime: '08:00:00',
 	maxTime: '22:00:00',
 	navLinks: true,
-	displayEventTime: true, // don't show the time column in list view
 	eventLimit: true,
 	googleCalendarApiKey: 'AIzaSyCnRyFyPuJ9WSeu602Q7CE13TsxWVNbw10',
 
