@@ -36,6 +36,10 @@
   border: 0;
 }
 
+.fc-day-grid-event .fc-content {
+  white-space: normal;
+}
+
 .fc-day-grid-event {
   white-space: normal;
   overflow: hidden;
