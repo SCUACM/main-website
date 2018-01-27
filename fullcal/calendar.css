@@ -20,7 +20,7 @@
   background: white;
 }
 
-.fc-widget-header {
+.fc-day-header {
   color: black;
 }
 
@@ -32,8 +32,16 @@
   border: 0;
 }
 
+.fc-axis {
+  border: 0;
+}
+
 .fc-day-number {
   color: black;
+}
+
+.fc-event {
+  border-radius: 2px;
 }
 
 .fc-center {
