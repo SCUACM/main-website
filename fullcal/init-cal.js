@@ -20,12 +20,12 @@ $(document).ready(function() {
 		{
 			googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
 			color: rgb(0, 135, 69),
-			eventBorderColor: rgb(0, 135, 69)
+			borderColor: rgb(0, 135, 69)
 		},
 		{
 			googleCalendarId: 'santaclara.acm@gmail.com',
 			color: rgb(0, 152, 233),
-			eventBorderColor: rgb(0, 152, 233)
+			borderColor: rgb(0, 152, 233)
 		}
 	],
 
