@@ -65,15 +65,21 @@ $(document).ready(function() {
 	},
 
 	eventMouseover: function(event, jsEvent, view) {
-		var contentTitle = '<h4>'+event.title+'</h4>';
-		var content = ' ';
+		var title = '<h4>'+event.title+'</h4>';
+
+		if (event.location || event.description)
+			body = '';
+		else
+			body = 'No description.';
+
 		if (event.location)
-			content += '<p><b>Where?:</b> '+event.location+'<br />';
+			body += '<p><b>Where?:</b> '+event.location+'<br />';
 		if (event.description)
-			content += '<p><b>What?:</b> '+event.description+'<br />';
+			body += '<p><b>What?:</b> '+event.description+'<br />';
 
 		tooltip.set({
-			'content.text': content
+			'content.title': title,
+			'content.text': body
 		})
 		.reposition(jsEvent).show(jsEvent);
 	},
