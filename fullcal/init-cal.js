@@ -71,16 +71,18 @@ $(document).ready(function() {
 				}
 			},
 			show: {
-				hover: true
+				hover: true,
+				effect: function() { $(this).fadeIn(250); }
 			},
 			hide: {
 				fixed: true,
-				delay: 300
+				delay: 300,
+				effect: function() { $(this).fadeOut(250); }
 			},
 			style: 'qtip-light qtip-shadow qtip-rounded'
 		});
 	},
-	
+
 	views: {
 		agendaWeek: {
 			titleFormat: 'MMMM YYYY',
