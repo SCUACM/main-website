@@ -1,31 +1,5 @@
 $(document).ready(function() {
 
-  var tooltip = $('<div/>').qtip({
-		id: 'calendar',
-		prerender: true,
-		content: {
-			text: ' ',
-			title: {
-				button: false
-			}
-		},
-		position: {
-			my: 'bottom center',
-			at: 'top center',
-			target: 'event',
-			viewport: $('#calendar'),
-			adjust: {
-			  mouse: false,
-			  scroll: false
-			}
-		},
-		show: false,
-		hide: {
-			fixed: true
-		},
-		style: 'qtip-light qtip-shadow qtip-rounded'
-	}).qtip('api');
-
   $('#calendar').fullCalendar({
 
 	header: {
@@ -60,10 +34,10 @@ $(document).ready(function() {
 		return false;
 	},
 
-	eventMouseover: function(event, jsEvent, view) {
+	eventRender: function(event, element) {
 		var title = '<h4>'+event.title+'</h4>';
 
-		body = '<p><b>When:</b> ';
+		var body = '<p><b>When:</b> ';
 		if (event.allDay)
 		    body += 'All day';
 		else {
@@ -77,17 +51,35 @@ $(document).ready(function() {
 		if (event.description)
 			body += '<br/><p><b>Description:</b> ' + event.description;
 
-		tooltip.set({
-			'content.title': title,
-			'content.text': body
-		})
-		.reposition(jsEvent).show(jsEvent);
-	},
-
-	dayClick: function() { tooltip.hide() },
-	eventResizeStart: function() { tooltip.hide() },
-	eventDragStart: function() { tooltip.hide() },
-	viewDisplay: function() { tooltip.hide() },
+		element.qtip({
+			prerender: true,
+			content: {
+				text: body,
+				title: {
+					button: false,
+					text: title
+				}
+			},
+			position: {
+				my: 'bottom center',
+				at: 'top center',
+				target: 'event',
+				viewport: $('#calendar'),
+				adjust: {
+				  mouse: false,
+				  scroll: false
+				}
+			},
+			show: {
+				hover: true
+			},
+			hide: {
+				fixed: true,
+				delay: 300
+			},
+			style: 'qtip-light qtip-shadow qtip-rounded'
+		});
+	}
 
 	views: {
 		agendaWeek: {
