@@ -1,18 +1,5 @@
 $(document).ready(function() {
 
-  Date.prototype.formatTime = function() {
-  	var h = this.getHours();
-    var m = this.getMinutes();
-    var isPM = h < 12;
-    
-    if (h > 12)
-    	h -= 12;
-    if (m < 10)
-    	m = '0' + m;
-    
-    return h + ':' + m + (isPM ? 'pm' : 'am');
-  };
-
   var tooltip = $('<div/>').qtip({
 		id: 'calendar',
 		prerender: true,
@@ -83,13 +70,16 @@ $(document).ready(function() {
 		body = '<p><b>When:</b> ';
 		if (event.allDay)
 		    body += 'All day';
-		else
-			body += event.start.formatTime()+' - '+event.end.formatTime()
+		else {
+			var start = moment(event.start).format("hh:mma");
+			var end = moment(event.end).format("hh:mma");
+			body += start + ' - ' + end;
+		}
 
 		if (event.location)
-			body += '<br/><p><b>Where:</b> '+event.location;
+			body += '<br/><p><b>Where:</b> ' + event.location;
 		if (event.description)
-			body += '<br/><p><b>Description:</b> '+event.description;
+			body += '<br/><p><b>Description:</b> ' + event.description;
 
 		tooltip.set({
 			'content.title': title,
