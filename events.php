@@ -33,6 +33,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/shared.css">
 		<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fullcal/jquery.qtip.min.css">
 		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.min.css">
 		<link rel="stylesheet" type="text/css" href="fullcal/calendar.css">
 
@@ -43,6 +44,7 @@
 		<script type="text/javascript" src="/js/vendor/moment.min.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
+		<script type="text/javascript" src="fullcal/jquery.qtip.min.js"></script>
 		<script type="text/javascript" src="fullcal/fullcalendar.min.js"></script>
 		<script type="text/javascript" src="fullcal/gcal.min.js"></script>
 		<script type="text/javascript" src="fullcal/init-cal.js"></script>
