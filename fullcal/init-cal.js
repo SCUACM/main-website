@@ -19,14 +19,11 @@ $(document).ready(function() {
 			  scroll: false
 			}
 		},
-		show: {
-    		delay: 400
-    	},
+		show: false,
 		hide: {
-        	fixed: true,
-        	delay: 200
-    	},
-		style: 'qtip-light qtip-rounded'
+			distance: 40
+		},
+		style: 'qtip-light qtip-shadow qtip-rounded'
 	}).qtip('api');
 
   $('#calendar').fullCalendar({
