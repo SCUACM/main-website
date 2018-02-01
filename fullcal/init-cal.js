@@ -65,10 +65,12 @@ $(document).ready(function() {
 	},
 
 	eventMouseover: function(event, jsEvent, view) {
-		var content = '<h4>'+event.title+'</h4>' +
-			'<p><b>When?:</b> '+event.start+'-'+event.end+'<br />'
-			'<p><b>Where?:</b> '+event.location+'<br />'
-			'<p><b>What?:</b> '+event.description+'<br />';
+		var contentTitle = '<h4>'+event.title+'</h4>';
+		var content = ' ';
+		if (event.location)
+			content += '<p><b>Where?:</b> '+event.location+'<br />';
+		if (event.description)
+			content += '<p><b>What?:</b> '+event.description+'<br />';
 
 		tooltip.set({
 			'content.text': content
