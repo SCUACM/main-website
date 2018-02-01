@@ -21,7 +21,7 @@ $(document).ready(function() {
 		},
 		show: false,
 		hide: {
-			distance: 40
+			fixed: true
 		},
 		style: 'qtip-light qtip-shadow qtip-rounded'
 	}).qtip('api');
