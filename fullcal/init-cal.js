@@ -23,8 +23,8 @@ $(document).ready(function() {
     		delay: 100
     	},
 		hide: {
-        fixed: true,
-        delay: 300
+        	fixed: true,
+        	delay: 300
     	},
 		style: 'qtip-light'
 	}).qtip('api');
@@ -65,8 +65,10 @@ $(document).ready(function() {
 	},
 
 	eventMouseover: function(event, jsEvent, view) {
-		var content = '<h3>'+event.title+'</h3>' +
-				'<p><b>Desc:</b> '+event.description+'<br />';
+		var content = '<h4>'+event.title+'</h4>' +
+			'<p><b>When?:</b> '+event.start+'-'+event.end+'<br />'
+			'<p><b>Where?:</b> '+event.location+'<br />'
+			'<p><b>What?:</b> '+event.description+'<br />';
 
 		tooltip.set({
 			'content.text': content
