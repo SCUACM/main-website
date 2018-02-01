@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+  Date.prototype.formatTime = function() {
+  	var h = this.getHours();
+    var m = this.getMinutes();
+    var isPM = h < 12;
+    
+    if (h > 12)
+    	h -= 12;
+    if (m < 10)
+    	m = '0' + m;
+    
+    return h + ':' + m + (isPM ? 'pm' : 'am');
+  };
+
   var tooltip = $('<div/>').qtip({
 		id: 'calendar',
 		prerender: true,
@@ -67,15 +80,16 @@ $(document).ready(function() {
 	eventMouseover: function(event, jsEvent, view) {
 		var title = '<h4>'+event.title+'</h4>';
 
-		if (event.location || event.description)
-			body = '';
+		body = '<p><b>When:</b> ';
+		if (event.allDay)
+		    body += 'All day';
 		else
-			body = 'No description.';
+			body += event.start.formatTime()+' - '+event.end.formatTime()
 
 		if (event.location)
-			body += '<p><b>Where?:</b> '+event.location+'<br />';
+			body += '<br/><p><b>Where:</b> '+event.location;
 		if (event.description)
-			body += '<p><b>What?:</b> '+event.description+'<br />';
+			body += '<br/><p><b>Description:</b> '+event.description;
 
 		tooltip.set({
 			'content.title': title,
