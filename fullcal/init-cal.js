@@ -36,7 +36,6 @@ $(document).ready(function() {
 	defaultView: 'month',
 	minTime: '08:00:00',
 	maxTime: '22:00:00',
-	navLinks: true,
 	eventLimit: true,
 	googleCalendarApiKey: 'AIzaSyCnRyFyPuJ9WSeu602Q7CE13TsxWVNbw10',
 
