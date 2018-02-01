@@ -79,8 +79,8 @@ $(document).ready(function() {
 			},
 			style: 'qtip-light qtip-shadow qtip-rounded'
 		});
-	}
-
+	},
+	
 	views: {
 		agendaWeek: {
 			titleFormat: 'MMMM YYYY',
