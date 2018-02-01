@@ -12,7 +12,7 @@ $(document).ready(function() {
 		position: {
 			my: 'bottom center',
 			at: 'top center',
-			target: 'mouse',
+			target: 'event',
 			viewport: $('#calendar'),
 			adjust: {
 			  mouse: false,
@@ -20,13 +20,13 @@ $(document).ready(function() {
 			}
 		},
 		show: {
-    		delay: 100
+    		delay: 400
     	},
 		hide: {
         	fixed: true,
-        	delay: 300
+        	delay: 200
     	},
-		style: 'qtip-light'
+		style: 'qtip-light qtip-rounded'
 	}).qtip('api');
 
   $('#calendar').fullCalendar({
@@ -71,8 +71,8 @@ $(document).ready(function() {
 		if (event.allDay)
 		    body += 'All day';
 		else {
-			var start = moment(event.start).format("hh:mma");
-			var end = moment(event.end).format("hh:mma");
+			var start = moment(event.start).format("h:mma");
+			var end = moment(event.end).format("h:mma");
 			body += start + ' - ' + end;
 		}
 
