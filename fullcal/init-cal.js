@@ -76,7 +76,7 @@ $(document).ready(function() {
 			},
 			hide: {
 				fixed: true,
-				delay: 300,
+				delay: 100,
 				effect: function() { $(this).fadeOut(250); }
 			},
 			style: 'qtip-light qtip-shadow qtip-rounded'
