@@ -31,11 +31,11 @@
 		<title>ACM Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" type="text/css" href="css/shared.css">
-		<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="fullcal/jquery.qtip.min.css">
-		<link rel="stylesheet" type="text/css" href="fullcal/fullcalendar.min.css">
-		<link rel="stylesheet" type="text/css" href="fullcal/calendar.css">
+		<link rel="stylesheet" type="text/css" href="/css/shared.css">
+		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/vendor/jquery.qtip.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/fullcal/fullcalendar.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/fullcal/calendar.css">
 
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -44,10 +44,10 @@
 		<script type="text/javascript" src="/js/vendor/moment.min.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
-		<script type="text/javascript" src="fullcal/jquery.qtip.min.js"></script>
-		<script type="text/javascript" src="fullcal/fullcalendar.min.js"></script>
-		<script type="text/javascript" src="fullcal/gcal.min.js"></script>
-		<script type="text/javascript" src="fullcal/init-cal.js"></script>
+		<script type="text/javascript" src="/js/vendor/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/gcal.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/init-cal.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
