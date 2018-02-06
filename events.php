@@ -31,15 +31,23 @@
 		<title>ACM Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" type="text/css" href="css/shared.css">
-		<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/shared.css">
+		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/vendor/jquery.qtip.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/fullcal/fullcalendar.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/fullcal/calendar.css">
 
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
+		<script type="text/javascript" src="/js/vendor/moment.min.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
+		<script type="text/javascript" src="/js/vendor/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/gcal.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/init-cal.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
@@ -69,6 +77,7 @@
 
 		<div class="paper">
 			<!-- Calendar -->
+			<!-- Calendar -->
 			<div id="wrapper">
 				<div class="container-fluid">
 					<div id="bumper"></div>
@@ -77,7 +86,8 @@
 					<div class="row">
 						<div class="col-sm-12 profile">
 							<center>
-								<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=santaclara.acm%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+								<div id='loading'>loading...</div>
+								<div id="calendar"></div>
 							</center>
 						</div>
 					</div>
