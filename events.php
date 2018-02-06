@@ -83,14 +83,8 @@
 					<div id="bumper"></div>
 					<h1 class="Club_name">Calendar</h1>
 					<hr class="title-divider">
-					<div class="row">
-						<div class="col-sm-12 profile">
-							<center>
-								<div id='loading'>loading...</div>
-								<div id="calendar"></div>
-							</center>
-						</div>
-					</div>
+					<div id='loading'>loading...</div>
+					<div id="calendar"></div>
 					<br>
 					<br>
 				</div>
