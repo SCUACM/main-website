@@ -92,7 +92,15 @@ $(document).ready(function() {
 
 	loading: function(bool) {
 		$('#loading').toggle(bool);
-	}
+	},
+
+	windowResize: function(view) {
+      if ($(window).width() < 514){
+        $('#calendar').fullCalendar( 'changeView', 'agendaDay' );
+      } else {
+        $('#calendar').fullCalendar( 'changeView', 'month' );
+      }
+    }
 
   });
 

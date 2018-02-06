@@ -45,7 +45,7 @@
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.qtip.min.js"></script>
-		<script type="text/javascript" src="/js/fullcal/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/fullcalendar.js"></script>
 		<script type="text/javascript" src="/js/fullcal/gcal.min.js"></script>
 		<script type="text/javascript" src="/js/fullcal/init-cal.js"></script>
 	</head>
