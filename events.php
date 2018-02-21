@@ -45,7 +45,7 @@
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
 		<script type="text/javascript" src="/js/vendor/jquery.qtip.min.js"></script>
-		<script type="text/javascript" src="/js/fullcal/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="/js/fullcal/fullcalendar.js"></script>
 		<script type="text/javascript" src="/js/fullcal/gcal.min.js"></script>
 		<script type="text/javascript" src="/js/fullcal/init-cal.js"></script>
 	</head>
@@ -83,14 +83,8 @@
 					<div id="bumper"></div>
 					<h1 class="Club_name">Calendar</h1>
 					<hr class="title-divider">
-					<div class="row">
-						<div class="col-sm-12 profile">
-							<center>
-								<div id='loading'>loading...</div>
-								<div id="calendar"></div>
-							</center>
-						</div>
-					</div>
+					<div id='loading'>loading...</div>
+					<div id="calendar"></div>
 					<br>
 					<br>
 				</div>

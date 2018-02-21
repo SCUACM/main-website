@@ -92,7 +92,29 @@ $(document).ready(function() {
 
 	loading: function(bool) {
 		$('#loading').toggle(bool);
-	}
+	},
+
+	windowResize: function(view) {
+      if ($(window).width() < 514){  // Mobile options
+        $('#calendar').fullCalendar( 'changeView', 'agendaDay' );
+        $('#calendar').fullCalendar( 'option', {
+        	header: {
+			  	left: 'prev,next today',
+			  	center: 'title',
+			  	right: 'agendaDay'
+			}
+        })
+      } else {  // Full screen options
+        $('#calendar').fullCalendar( 'changeView', 'month' );
+        $('#calendar').fullCalendar( 'option', {
+        	header: {
+			  	left: 'prev,next today',
+			  	center: 'title',
+			  	right: 'agendaWeek,month'
+			}
+        })
+      }
+    }
 
   });
 
