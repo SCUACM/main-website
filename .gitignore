@@ -16,3 +16,6 @@ Pictures/
 Public/
 Templates/
 Videos/
+node_modules/
+package-lock.json
+dist/
