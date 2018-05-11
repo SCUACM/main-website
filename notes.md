@@ -1,0 +1,2 @@
+- CSS files index and shared conflict on canvas
+- CSS for font size not coming through 

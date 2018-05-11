@@ -1,22 +1,58 @@
 import express from "express";
+import path from "path";
+import morgan from "morgan";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import expressLayouts from "express-ejs-layouts";
+import session from "express-session";
+import redis from "redis";
+import redisStore from "connect-redis";
+import fs from "fs";
+import * as routes from "./controllers/index";
 
 class App {
-  public express: express.Express;
+    public server: express.Express;
+    public redis: redis.RedisClient;
+    public routes: routes.Routes;
 
-  constructor () {
-    this.express = express()
-    this.mountRoutes()
-  }
+    constructor() {
+        this.server = express();
+        // this.redis = redis.createClient();
+        this.setupViews();
+        this.setupMiddleWare();
+        // this.setupRedis();
+        this.routes = new routes.Routes(this.server);
+    }
 
-  private mountRoutes (): void {
-    const router = express.Router()
-    router.get('/', (req, res) => {
-      res.json({
-        message: 'Hello World!'
-      })
-    })
-    this.express.use('/', router)
-  }
+    private setupViews(): void {
+        this.server.set('views', path.join(__dirname, '..', 'views'));
+        this.server.set('view engine', 'ejs');
+    }
+
+    private setupMiddleWare(): void {
+        // this.server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+        this.server.use(morgan('dev'));
+        this.server.use(bodyParser.json());
+        this.server.use(bodyParser.urlencoded({ extended: true }));
+        this.server.use(cookieParser());
+        this.server.use(express.static(path.join(__dirname, '..', 'public')));
+        // this.server.use(expressLayouts);
+    }
+
+    private setupRedis(): void {
+        let store = redisStore(session);
+        let client;
+        this.server.use(
+            session({
+                store: new store({
+                    host: "localhost",
+                    port: 6379,
+                    client: client
+                }),
+                secret: "AAAAAAAAAAAAAAAAAAAAa"
+            })
+        );
+    }
 }
 
-export default new App().express
+export default new App().server
