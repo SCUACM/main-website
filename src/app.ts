@@ -8,7 +8,8 @@ import session from "express-session";
 import redis from "redis";
 import redisStore from "connect-redis";
 import fs from "fs";
-import * as routes from "./controllers/index";
+import * as routes from "./controller";
+import * as models from "./model";
 
 class App {
     public server: express.Express;
@@ -17,11 +18,12 @@ class App {
 
     constructor() {
         this.server = express();
-        // this.redis = redis.createClient();
+        this.redis = redis.createClient();
         this.setupViews();
         this.setupMiddleWare();
-        // this.setupRedis();
+        this.setupRedis();
         this.routes = new routes.Routes(this.server);
+        models.seqInst.sync();
     }
 
     private setupViews(): void {
@@ -41,13 +43,12 @@ class App {
 
     private setupRedis(): void {
         let store = redisStore(session);
-        let client;
         this.server.use(
             session({
                 store: new store({
                     host: "localhost",
                     port: 6379,
-                    client: client
+                    client: this.redis
                 }),
                 secret: "AAAAAAAAAAAAAAAAAAAAa"
             })
@@ -55,4 +56,4 @@ class App {
     }
 }
 
-export default new App().server
+export default new App().server;

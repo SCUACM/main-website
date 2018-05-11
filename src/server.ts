@@ -1,6 +1,6 @@
-import app from "./app";
 import * as http from "http";
 import * as debug from "debug";
+import app from "./app";
 
 const port = process.env.PORT || '3000';
 
