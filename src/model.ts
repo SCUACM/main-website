@@ -26,6 +26,9 @@ const boardMember = seqInst.define('board_member', {
     icon: {
       type: sequelize.STRING
     },
+    group: {
+        type: sequelize.STRING
+    },
     email: {
         type: sequelize.STRING
     },

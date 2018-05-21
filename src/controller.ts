@@ -1,6 +1,15 @@
 import express from "express";
+import multer from "multer";
 import * as models from "./model";
 import { Models, Model } from "sequelize";
+import path from "path";
+
+const file_upload = multer({ dest: 'uploads/' });
+
+const session_fetch = (req: express.Request, res:express.Response, next: Function) => {
+    res.locals.session = req.session;
+    next();
+} 
 
 const index = {
     index: {
@@ -22,7 +31,24 @@ const board = {
     index: {
         get: (req: express.Request, res:express.Response): void => {
             models.boardMember.findAll().then((all: any) => {
-                res.render('board/index', { members: all });
+                let acm: any[] = [], acmw: any[] = [], advise: any[] = [];
+                let ittr: Function = (index: number, completed: Function) => {
+                    if(index >= all.length) {
+                        completed();
+                    }else{
+                        if(all[index].group == "ACM") {
+                            acm.push(all[index]);
+                        } else if(all[index].group == "ACM-W") {
+                            acmw.push(all[index]);
+                        } else if(all[index].group == "Sponsor") {
+                            advise.push(all[index]);
+                        }
+                        ittr(index + 1, completed);
+                    }
+                }
+                ittr(0, () => {
+                    res.render('board/index', { acm: acm, acmw: acmw, advise: advise });
+                });
             });
         }
     },
@@ -31,11 +57,12 @@ const board = {
         get: (req: express.Request, res:express.Response): void => {
             res.render('board/new');
         },
-        post: (req: express.Request, res:express.Response): void => {
+        post: [file_upload.single('icon'), (req: any, res:express.Response): void => {
+            req.body.icon = "/" + req.file.path;
             models.boardMember.create(req.body).then(() => {
                 res.redirect('/board');
             });
-        }
+        }]
     },
 
     edit: {
@@ -44,13 +71,13 @@ const board = {
                 res.render('board/edit', { record: m });
             });
         },
-        post: (req: express.Request, res:express.Response): void => {
+        post: [file_upload.single('icon'), (req: express.Request, res:express.Response): void => {
             models.boardMember.findById(req.params["id"]).then((m: any) => {
                 m.updateAttributes(req.body).then(()=> {
                     res.redirect("/board");
                 });
             });
-        }
+        }]
     },
 
     del: {
@@ -116,9 +143,40 @@ const join = {
     }
 };
 
+const login = {
+    index: {
+        get: (req: express.Request, res:express.Response): void => {
+            if(req.session.admin === true) {
+                req.session.admin = false;
+                res.redirect('/');
+            } else {
+                res.render('login/index');
+            }
+        },
+        post: (req: express.Request, res:express.Response): void => {
+            if(req.body.username === "USER" && req.body.password === "PASS") {
+                req.session.admin = true;
+                res.redirect('/');
+            } else {
+                res.redirect('/login');
+            }
+        }
+    }
+};
+
+const uploads = {
+    get: (req: express.Request, res:express.Response): void => {
+        console.log(req.params);
+        res.sendFile(path.join(__dirname, '..', 'uploads', req.params.id));
+    } 
+}
+
 class Routes {
 
     constructor(server: express.Express) {
+
+        server.use(session_fetch);
+
         const router = express.Router();
         router.get('/', index.index.get);
 
@@ -145,10 +203,14 @@ class Routes {
 
         router.get('/events/:id/delete', events.del.get);
 
-
         router.get('/resources', resources.index.get);
         
         router.get('/join', join.index.get);
+
+        router.get('/login', login.index.get);
+        router.post('/login', login.index.post);
+
+        router.get('/uploads/:id', uploads.get);
 
         server.use('/', router);
     }

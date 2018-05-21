@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('../head', {title: "Login"}) %>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<%- include('../navbar', {}) %>
+
+		<!-- Content -->
+		<div class="paper">
+			<!-- Form -->
+			<div id="wrapper">
+				<div class="container-fluid">
+					<div id="bumper"></div>
+					<h1 class="Club_name">Login</h1>
+					<hr class="title-divider">
+					<div class="row">
+						<div class="col-sm-12 profile">
+							<center>
+                                <div id="mc_embed_signup">
+                                    <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                                        <div id="mc_embed_signup_scroll">
+											<div class="mc-field-group">
+												<label>Username</label>
+												<input type="text" value="" name="username" required>
+											</div>
+											<div class="mc-field-group">
+												<label>Password </label>
+												<input type="password" value="" name="password" required>
+											</div>
+											<button>Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+							</center>
+						</div>
+					</div>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/js/navbar.js"></script>
+	</body>
+</html>

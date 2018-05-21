@@ -23,7 +23,7 @@ class App {
         this.setupMiddleWare();
         this.setupRedis();
         this.routes = new routes.Routes(this.server);
-        models.seqInst.sync();
+        models.seqInst.sync({ force: false });
     }
 
     private setupViews(): void {
