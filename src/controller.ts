@@ -57,9 +57,15 @@ const board = {
         get: (req: express.Request, res:express.Response): void => {
             res.render('board/new');
         },
-        post: [file_upload.single('icon'), (req: any, res:express.Response): void => {
-            req.body.icon = "/" + req.file.path;
-            models.boardMember.create(req.body).then(() => {
+        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+            models.boardMember.create({
+                name: req.body.name,
+                position: req.body.position,
+                icon: "/" + req.file.path,
+                group: req.body.group, 
+                email: req.body.email,
+                bio: req.body.bio
+            }).then(() => {
                 res.redirect('/board');
             });
         }]
@@ -67,13 +73,21 @@ const board = {
 
     edit: {
         get: (req: express.Request, res:express.Response): void => {
-            models.boardMember.findById(req.params["id"]).then((m: any) => {
+            models.boardMember.findById(req.params.id).then((m: any) => {
                 res.render('board/edit', { record: m });
             });
         },
-        post: [file_upload.single('icon'), (req: express.Request, res:express.Response): void => {
-            models.boardMember.findById(req.params["id"]).then((m: any) => {
-                m.updateAttributes(req.body).then(()=> {
+        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+            models.boardMember.findById(req.params.id).then((m: any) => {
+                console.log(req.file);
+                m.updateAttributes({
+                    name: req.body.name,
+                    position: req.body.position,
+                    icon: (req.file ? "/" + req.file.path : m.icon),
+                    group: req.body.group, 
+                    email: req.body.email,
+                    bio: req.body.bio
+                }).then(()=> {
                     res.redirect("/board");
                 });
             });
@@ -92,8 +106,8 @@ const board = {
 const events = {
     index: {
         get: (req: express.Request, res:express.Response): void => {
-            models.event.findAll().then((all: any) => {
-                res.render('events/index', { events: all });
+            models.event_group.findAll({ include: [models.event] }).then((groups: any) => {
+                res.render('events/index', { groups: groups });
             });
         }
     },
@@ -102,26 +116,48 @@ const events = {
         get: (req: express.Request, res:express.Response): void => {
             res.render('events/new');
         },
-        post: (req: express.Request, res:express.Response): void => {
-            models.event.create(req.body).then(() => {
-                res.redirect('/events');
+        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+            models.event_group.findOrCreate({ 
+                where: { name: req.body.group }, 
+                defaults: { name: req.body.group } 
+            }).spread((grp: any, created) => {
+                models.event.create({
+                    dates: req.body.dates,
+                    icon: "/" + req.file.path,
+                    info: req.body.info
+                }).then((ne)=>{
+                    grp.addEvent(ne).then(()=>{
+                        res.redirect('/events');
+                    });
+                });
             });
-        }
+        }]
     },
 
     edit: {
         get: (req: express.Request, res:express.Response): void => {
-            res.render('events/edit');
+            models.event.findById(req.params.id, { include: [models.event_group] }).then((e: any) => {
+                console.log(e);
+                res.render('events/edit', { e: e });
+            });
         },
-        post: (req: express.Request, res:express.Response): void => {
-
-        }
+        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+            models.event.findById(req.params["id"]).then((m: any) => {
+                m.updateAttributes({
+                    dates: req.body.dates,
+                    icon: (req.file ? "/" + req.file.path : m.icon),
+                    info: req.body.info
+                }).then(()=> {
+                    res.redirect("/events");
+                });
+            });
+        }]
     },
 
     del: {
         get: (req: express.Request, res:express.Response): void => {
             models.event.destroy({ where: { id: req.params["id"] } }).then((m: any) => {
-                res.redirect("/board");
+                res.redirect("/events");
             });
         }
     }

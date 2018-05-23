@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc && node ./dist/server.js"
+    "start": "tsc && node ./dist/server.js",
+    "start_services": "service mysql start && service redis-server start",
+    "stop_services": "sudo service mysql stop && sudo service redis-server stop"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

@@ -37,10 +37,14 @@ const boardMember = seqInst.define('board_member', {
     }
 });
 
-const event = seqInst.define('event', {
-    type: {
+
+const event_group = seqInst.define('event_group', {
+    name: {
         type: sequelize.STRING
-    },
+    }
+});
+
+const event = seqInst.define('event', {
     dates: {
         type: sequelize.STRING
     },
@@ -52,4 +56,7 @@ const event = seqInst.define('event', {
     }
 });
 
-export { seqInst, boardMember, event };
+event.belongsTo(event_group);
+event_group.hasMany(event);
+
+export { seqInst, boardMember, event_group, event };

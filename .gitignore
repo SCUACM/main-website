@@ -19,3 +19,5 @@ Videos/
 node_modules/
 package-lock.json
 dist/
+uploads/*
+!uploads/.gitkeep

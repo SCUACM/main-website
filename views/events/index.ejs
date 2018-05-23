@@ -54,37 +54,43 @@
 				</div>
 			</div>
 
-			<!-- <cms:folders masterpage="events.php" order="desc" exclude="2018">
+			<% if(session.admin){ %>
+				<a href="/events/new">New</a>
+			<% } %>
+			<% groups.forEach(function(g) { %>
 				<div id="wrapper">
 					<div class="container-fluid">
 						<div id="bumper"></div>
-						<h1 class="Club_name"><cms:show k_folder_name /> Events</h1>
+						<h1 class="Club_name"><%= g.name %> Events</h1>
 						<hr class="title-divider">
-						<cms:pages masterpage="events.php" folder=k_folder_name>
-							<cms:set eventnum = "<cms:mod k_count '2' />" />
-							<cms:if eventnum == '1'>
+						<% g.events.forEach(function(e, i) { %>
+							<% if(i % 3 === 0) { %>
 								<div class="row">
-							</cms:if>
+							<% } %>
 							<div class="col-sm-6 profile">
-								<center><img src="<cms:show image />" class="prof-pic" style="height:250px"></center>
+								<center><img src="<%= e.icon %>" class="prof-pic" style="height:250px"></center>
 								<p class="prof-title">
 									<i>
-										<b><cms:show datestr />, <cms:show k_folder_name /></b>
+										<b><%= e.dates %>, <%= g.name %></b>
 										<br>
 									</i>
 								</p>
 								<hr class="prof-line">
-								<p class="prof-bio-center"><cms:show description /></p>
+								<p class="prof-bio-center"><%= e.info %></p>
+								<% if(session.admin) { %>
+									<a href="/events/<%= e.id %>/edit">Edit</a>
+									<a href="/events/<%= e.id %>/delete">Delete</a>
+								<% } %>
 								<br>
 								<br>
 							</div>
-							<cms:if (eventnum == '0') || (k_count == k_total_records)>
+							<% if(i % 3 === 2 || i === g.events.length - 1) { %>
 								</div>
-							</cms:if>
-						</cms:pages>
+							<% } %>
+						<% }); %>
 					</div>
 				</div>
-			</cms:folders> -->
+			<% }); %>
 		</div>
 
 		<script type="text/javascript" src="/js/navbar.js"></script>

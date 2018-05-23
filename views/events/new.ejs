@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('../head', {title: "New Event"}) %>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<%- include('../navbar', {}) %>
+
+		<!-- Content -->
+		<div class="paper">
+			<!-- Form -->
+			<div id="wrapper">
+				<div class="container-fluid">
+					<div id="bumper"></div>
+					<h1 class="Club_name">New Event</h1>
+					<hr class="title-divider">
+					<div class="row">
+						<div class="col-sm-12 profile">
+							<center>
+                                <div id="mc_embed_signup">
+                                    <form action="" method="post" id="mc-embedded-subscribe-form" enctype="multipart/form-data" name="mc-embedded-subscribe-form">
+                                        <div id="mc_embed_signup_scroll">
+											<div class="mc-field-group">
+												<label>Image </label>
+												<input type="file" value="" name="icon" required>
+											</div>
+											<div class="mc-field-group">
+												<label>Dates</label>
+												<input type="text" value="" name="dates" required>
+											</div>
+											<div class="mc-field-group">
+												<label>Group</label>
+												<input type="text" value="" name="group" required>
+											</div>
+											<div class="mc-field-group">
+												<label>Info </label>
+												<textarea class="form" name="info" required></textarea>
+											</div>
+											<button class="form">New!</button>
+                                        </div>
+                                    </form>
+                                </div>
+							</center>
+						</div>
+					</div>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/js/navbar.js"></script>
+	</body>
+</html>
