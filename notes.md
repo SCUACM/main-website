@@ -1,2 +1,5 @@
-- CSS files index and shared conflict on canvas
-- CSS for font size not coming through 
+- Permissions on requests need checking
+- New, Edit, and Delete need icons
+- Delete needs to remove uploaded files from database
+- 404 and 500 error pages
+- Enable Favicon

@@ -156,8 +156,28 @@ const events = {
 
     del: {
         get: (req: express.Request, res:express.Response): void => {
-            models.event.destroy({ where: { id: req.params["id"] } }).then((m: any) => {
-                res.redirect("/events");
+            models.event.findById(req.params.id, { 
+                include: [ 
+                    { 
+                        model: models.event_group, 
+                        include: [ models.event ] 
+                    } 
+                ] 
+            }).then((m: any) =>{
+                let del_group: any = undefined;
+                console.log(m);
+                if(m.event_group.events.length === 1) {
+                    del_group = m.event_group;
+                }
+                m.destroy().then(() => {
+                    if(del_group) {
+                        del_group.destroy().then(() => {
+                            res.redirect("/events");
+                        });
+                    } else {
+                        res.redirect("/events");
+                    }
+                });
             });
         }
     }
