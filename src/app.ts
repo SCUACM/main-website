@@ -3,18 +3,20 @@ import path from "path";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-import expressLayouts from "express-ejs-layouts";
+import favicon from "serve-favicon";
 import session from "express-session";
 import redis from "redis";
 import redisStore from "connect-redis";
 import fs from "fs";
-import * as routes from "./controller";
+import router from "./controller";
 import * as models from "./model";
+
+const config = require("../config.json");
 
 class App {
     public server: express.Express;
     public redis: redis.RedisClient;
-    public routes: routes.Routes;
+    public routes: router;
 
     constructor() {
         this.server = express();
@@ -22,7 +24,7 @@ class App {
         this.setupViews();
         this.setupMiddleWare();
         this.setupRedis();
-        this.routes = new routes.Routes(this.server);
+        this.routes = new router(this.server);
         models.seqInst.sync({ force: false });
     }
 
@@ -32,13 +34,12 @@ class App {
     }
 
     private setupMiddleWare(): void {
-        // this.server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+        this.server.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
         this.server.use(morgan('dev'));
         this.server.use(bodyParser.json());
         this.server.use(bodyParser.urlencoded({ extended: true }));
         this.server.use(cookieParser());
         this.server.use(express.static(path.join(__dirname, '..', 'public')));
-        // this.server.use(expressLayouts);
     }
 
     private setupRedis(): void {
@@ -50,7 +51,7 @@ class App {
                     port: 6379,
                     client: this.redis
                 }),
-                secret: "AAAAAAAAAAAAAAAAAAAAa"
+                secret: config.session.secret
             })
         );
     }

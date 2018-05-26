@@ -21,3 +21,4 @@ package-lock.json
 dist/
 uploads/*
 !uploads/.gitkeep
+config.json

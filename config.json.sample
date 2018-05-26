@@ -1,0 +1,14 @@
+{
+    "database": {
+        "database": "acmsite",
+        "user": "acm",
+        "password": "acm-password123!"
+    },
+    "session": {
+        "secret": "AAAAAAAAAAAAAAAAAAAA"
+    },
+    "admin": {
+        "username": "USER",
+        "password": "PASS"
+    }
+}

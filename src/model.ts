@@ -2,13 +2,15 @@ import mysql from "mysql";
 import sequelize, { Sequelize } from "sequelize";
 import fs from "fs";
 
-// CREATE DATABASE acmsite
+const config = require("../config.json").database;
+
+// CREATE DATABASE acmsite;
 // GRANT ALL PRIVILEGES ON acmsite.* TO 'acm'@'localhost' IDENTIFIED BY 'acm-password123!';
 
 const seqInst = new sequelize(
-    "acmsite",
-    "acm",
-    "acm-password123!",
+    config.database,
+    config.user,
+    config.password,
     {
         dialect: "mysql",
         logging: console.log,

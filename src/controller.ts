@@ -6,10 +6,35 @@ import path from "path";
 
 const file_upload = multer({ dest: 'uploads/' });
 
+const config = require("../config.json");
+
+const errors = {
+    not_found: {
+        get: (req: express.Request, res:express.Response): void => {
+            res.status(404);
+            res.render('error');
+        } 
+    },
+    error: {
+        get: (req: express.Request, res:express.Response): void => {
+            res.status(500);
+            res.render('error');
+        } 
+    }
+}
+
 const session_fetch = (req: express.Request, res:express.Response, next: Function) => {
     res.locals.session = req.session;
     next();
 } 
+
+const assert_admin = (req: express.Request, res:express.Response, next: Function): void => {
+    if(req.session.admin === true) {
+        next();
+    } else {
+        errors.not_found.get(req, res);
+    }
+};
 
 const index = {
     index: {
@@ -54,10 +79,10 @@ const board = {
     },
 
     new: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             res.render('board/new');
-        },
-        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+        }],
+        post: [assert_admin, file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
             models.boardMember.create({
                 name: req.body.name,
                 position: req.body.position,
@@ -72,12 +97,12 @@ const board = {
     },
 
     edit: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             models.boardMember.findById(req.params.id).then((m: any) => {
                 res.render('board/edit', { record: m });
             });
-        },
-        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+        }],
+        post: [assert_admin, file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
             models.boardMember.findById(req.params.id).then((m: any) => {
                 console.log(req.file);
                 m.updateAttributes({
@@ -95,11 +120,11 @@ const board = {
     },
 
     del: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             models.boardMember.destroy({ where: { id: req.params["id"] } }).then((m: any) => {
                 res.redirect("/board");
             });
-        }
+        }]
     }
 };
 
@@ -113,10 +138,10 @@ const events = {
     },
 
     new: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             res.render('events/new');
-        },
-        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+        }],
+        post: [assert_admin, file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
             models.event_group.findOrCreate({ 
                 where: { name: req.body.group }, 
                 defaults: { name: req.body.group } 
@@ -135,13 +160,13 @@ const events = {
     },
 
     edit: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             models.event.findById(req.params.id, { include: [models.event_group] }).then((e: any) => {
                 console.log(e);
                 res.render('events/edit', { e: e });
             });
-        },
-        post: [file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
+        }],
+        post: [assert_admin, file_upload.single('icon'), (req: express.Request & { file: any }, res:express.Response): void => {
             models.event.findById(req.params["id"]).then((m: any) => {
                 m.updateAttributes({
                     dates: req.body.dates,
@@ -155,7 +180,7 @@ const events = {
     },
 
     del: {
-        get: (req: express.Request, res:express.Response): void => {
+        get: [assert_admin, (req: express.Request, res:express.Response): void => {
             models.event.findById(req.params.id, { 
                 include: [ 
                     { 
@@ -179,7 +204,7 @@ const events = {
                     }
                 });
             });
-        }
+        }]
     }
 };
 
@@ -210,7 +235,7 @@ const login = {
             }
         },
         post: (req: express.Request, res:express.Response): void => {
-            if(req.body.username === "USER" && req.body.password === "PASS") {
+            if(req.body.username === config.admin.username && req.body.password === config.admin.password) {
                 req.session.admin = true;
                 res.redirect('/');
             } else {
@@ -222,10 +247,11 @@ const login = {
 
 const uploads = {
     get: (req: express.Request, res:express.Response): void => {
-        console.log(req.params);
         res.sendFile(path.join(__dirname, '..', 'uploads', req.params.id));
     } 
 }
+
+
 
 class Routes {
 
@@ -269,7 +295,11 @@ class Routes {
         router.get('/uploads/:id', uploads.get);
 
         server.use('/', router);
+
+
+        server.use(errors.not_found.get);
+        server.use(errors.error.get);
     }
 }
 
-export { Routes };
+export default Routes;
