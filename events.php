@@ -10,6 +10,7 @@
 		<cms:folder name="2016" title="2016" />
 		<cms:folder name="2017" title="2017" />
 		<cms:folder name="2018" title="2018" />
+		<cms:folder name="2018" title="2019" />
 </cms:template>
 
 <!DOCTYPE html>
