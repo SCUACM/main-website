@@ -156,7 +156,8 @@
 							</div>
 						</cms:if>
 					</cms:pages>
-				</div>
+			<!--	</div> -->
+				<br />
 				<hr class="title-divider">
 				<div class="row">
 								<div class="connect text-center">
