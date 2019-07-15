@@ -123,7 +123,7 @@
 					</div>
 				</div>
 			</cms:folders>
-			</div>
+		<!--	</div> -->
 			<br />
 			<hr class="title-divider">
 			<div class="row">
