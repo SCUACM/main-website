@@ -158,7 +158,7 @@
 					</cms:pages>
 				</div>
 				<br />
-				<hr>
+				<hr class="title-divider">
 				<div class="row">
 								<div class="connect text-center">
 									<h2>
