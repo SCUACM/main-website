@@ -122,26 +122,25 @@
 						</cms:pages>
 					</div>
 				</div>
-				<br>
 			</cms:folders>
+
 			<br />
-			<br>
-			<br>
+			</div>
 			<hr class="title-divider">
 			<div class="row">
-								<div class="connect text-center">
-									<h2>
-										Connect with us!
-									</h2>
-								</div>
-								<div class="text-center">
-									<div class="col-xs-0 col-sm-2"></div>
-									<div class="col-xs-12 col-sm-8">
-										<div class="connect-bubble">
-											<a href="https://www.facebook.com/groups/165822943541098/?ref=br_rs" target="_blank">
-												<img src="img/logos/logo-fb.png">
-											</a>
-										</div>
+				<div class="connect text-center">
+					<h2>
+						Connect with us!
+					</h2>
+				</div>
+				<div class="text-center">
+					<div class="col-xs-0 col-sm-2"></div>
+					<div class="col-xs-12 col-sm-8">
+					<div class="connect-bubble">
+						<a href="https://www.facebook.com/groups/165822943541098/?ref=br_rs" target="_blank">
+							<img src="img/logos/logo-fb.png">
+						</a>
+				</div>
 										<div class="connect-bubble">
 											<a href="https://scuacm.slack.com" target="_blank">
 												<img src="img/logos/logo-slack.png">
@@ -165,7 +164,7 @@
 									</div>
 									<div class="col-xs-0 col-sm-2"></div>
 								</div>
-		</div>
+		
 
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
