@@ -10,7 +10,7 @@
 		<cms:folder name="2016" title="2016" />
 		<cms:folder name="2017" title="2017" />
 		<cms:folder name="2018" title="2018" />
-		<cms:folder name="2018" title="2019" />
+		<cms:folder name="2019" title="2019" />
 </cms:template>
 
 <!DOCTYPE html>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-left">
-						<li><a href="/">ACM</a></li>
+                        <li><a href="/"><img src="img/logos/logo_acm_white.png" height=30 width=70></a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/about">About</a></li>
