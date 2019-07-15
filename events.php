@@ -123,7 +123,8 @@
 					</div>
 				</div>
 			</cms:folders>
-
+			<br />
+			<hr>
 			<div class="row">
 								<div class="connect text-center">
 									<h2>

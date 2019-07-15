@@ -157,7 +157,8 @@
 						</cms:if>
 					</cms:pages>
 				</div>
-
+				<br />
+				<hr>
 				<div class="row">
 								<div class="connect text-center">
 									<h2>
