@@ -160,8 +160,6 @@
 				<br>
 				<br>
 				<br>
-				<br>
-				<br>
 				<hr class="title-divider">
 				<div class="row">
 								<div class="connect text-center">

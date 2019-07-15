@@ -122,9 +122,7 @@
 						</cms:pages>
 					</div>
 				</div>
-			</cms:folders>
-			<br />
-			<br>
+				<br>
 			<br>
 			<br>
 			<br>
@@ -167,6 +165,8 @@
 									</div>
 									<div class="col-xs-0 col-sm-2"></div>
 								</div>
+			</cms:folders>
+			<br />
 		</div>
 
 		<script type="text/javascript" src="/js/navbar.js"></script>
