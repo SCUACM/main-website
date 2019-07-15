@@ -158,8 +158,6 @@
 					</cms:pages>
 				</div>
 				<br>
-				<br>
-				<br>
 				<hr class="title-divider">
 				<div class="row">
 								<div class="connect text-center">
@@ -198,6 +196,8 @@
 									</div>
 									<div class="col-xs-0 col-sm-2"></div>
 								</div>
+					<br>
+					<br>
 					<br>
 					<br>
 					<br>

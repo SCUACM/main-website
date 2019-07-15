@@ -124,9 +124,7 @@
 				</div>
 				<br>
 			</cms:folders>
-		<!--	<br /> -->
-			<br>
-			<br>
+			<br />
 			<br>
 			<br>
 			<hr class="title-divider">
