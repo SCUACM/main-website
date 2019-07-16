@@ -89,8 +89,8 @@
 					<div id="calendar"></div>
 					<br>
 					<br>
-				</div>
-			</div>
+			<!--	</div>
+			</div>  -->
 
 			<cms:folders masterpage="events.php" order="desc">
 				<div id="wrapper">
@@ -113,8 +113,8 @@
 								</p>
 								<hr class="prof-line">
 								<p class="prof-bio-center"><cms:show description /></p>
-								<br>
-								<br>
+								<br />
+								<br />
 							</div>
 							<cms:if (eventnum == '0') || (k_count == k_total_records)>
 								</div>
