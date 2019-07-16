@@ -162,7 +162,7 @@
 				<div class="row">
 								<div class="connect text-center">
 									<h2>
-										Connect with us! -- trial -- 
+										Connect with us!
 									</h2>
 								</div>
 								<div class="text-center">
