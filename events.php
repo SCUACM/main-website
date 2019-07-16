@@ -97,7 +97,7 @@
 					<div class="container-fluid">
 						<div id="bumper"></div>
 						<h1 class="Club_name"><cms:show k_folder_name /> Events</h1>
-						<hr class="title-divider">
+						<hr >
 						<cms:pages masterpage="events.php" folder=k_folder_name>
 							<cms:set eventnum = "<cms:mod k_count '2' />" />
 							<cms:if eventnum == '1'>
@@ -123,8 +123,10 @@
 					</div>
 				</div>
 			</cms:folders>
+			<br />
+			<br>
 		</div>
-	
+	</div>
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
 </html>
