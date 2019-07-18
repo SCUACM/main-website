@@ -89,8 +89,8 @@
 					<div id="calendar"></div>
 					<br>
 					<br>
-			<!--	</div>
-			</div>  -->
+				</div>
+			</div> 
 
 			<cms:folders masterpage="events.php" order="desc">
 				<div id="wrapper">
