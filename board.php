@@ -187,18 +187,18 @@
 							</a>
 						</div>
 						<div class="connect-bubble">
-							<a href="https://www.linkedin.com/groups/13597280/" target="_top">
-								<img src="img/logos/logo-linkedin.png">
-							</a>
-						</div>
-						<div class="connect-bubble">
 							<a href="https://www.instagram.com/scu_acm/" target="_top">
-								<img src="img/logos/logo-instagram.jpg">
+								<img src="img/logos/logo-instagram.png">
 							</a>
 						</div>
 						<div class="connect-bubble">
 							<a href="https://discord.gg/ReQTuJD" target="_top">
 								<img src="img/logos/logo-discord.png">
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://www.linkedin.com/groups/13597280/" target="_top">
+								<img src="img/logos/logo-linkedin.png">
 							</a>
 						</div>
 					</div>
