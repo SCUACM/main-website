@@ -188,7 +188,7 @@
 						</div>
 						<div class="connect-bubble">
 							<a href="https://github.com/scuacm" taget="_blank">
-								<img src="img/logos/logo-github.png" height=70px width=100px>
+								<img src="img/logos/logo-github.png" height=80px width=110px>
 							</a>
 						</div>
 						<div class="connect-bubble">
