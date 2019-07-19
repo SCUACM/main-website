@@ -177,8 +177,8 @@
 									</a>
 						</div>
 						<div class="connect-bubble">
-							<a href="https://github.com/scuacm" taget="_blank">
-								<img src="img/logos/logo-github.png" height=30>
+							<a href="https://www.instagram.com/scu_acm/" target="_top">
+								<img src="img/logos/logo-instagram.png" height=50>
 							</a>
 						</div>
 						<div class="connect-bubble">
@@ -187,8 +187,8 @@
 							</a>
 						</div>
 						<div class="connect-bubble">
-							<a href="https://www.instagram.com/scu_acm/" target="_top">
-								<img src="img/logos/logo-instagram.png" height=30>
+							<a href="https://github.com/scuacm" taget="_blank">
+								<img src="img/logos/logo-github.png" height=50>
 							</a>
 						</div>
 						<div class="connect-bubble">
