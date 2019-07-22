@@ -34,7 +34,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
 
-		<link rel="icon" type="image/png" href="/img/logo/logo_acm_navy.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/img/logos/logo_acm_navy.png" sizes="32x32">
 		<!--<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
