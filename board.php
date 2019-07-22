@@ -34,10 +34,12 @@
 		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
 
-		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/logo_acm_navy.png" sizes="32x32">
+		<!--<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		-->
 
 		<script type="text/javascript" src="/js/vendor/jquery.js"></script>
 		<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
