@@ -31,8 +31,8 @@
 		<title>ACM Board</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 
 		<link rel="icon" type="image/png" href="/img/logos/logo_acm_navy.png" sizes="32x32">
 		<!--<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
