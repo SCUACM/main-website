@@ -32,8 +32,8 @@
 		<title>ACM Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 		<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/shared.css">
 		<link rel="stylesheet" type="text/css" href="/css/vendor/jquery.qtip.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/fullcal/fullcalendar.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/fullcal/calendar.css">
@@ -88,8 +88,10 @@
 					<div id='loading'>loading...</div>
 					<div id="calendar"></div>
 					<br />
-					<p style="float:left;"> View the ACM <a href="https://calendar.google.com/calendar/embed?src=santaclara.acm%40gmail.com&ctz=America%2FLos_Angeles">Google Calendar</a> </p>
-					<p style="float:right;"> Download the ACM <a href="https://calendar.google.com/calendar/ical/santaclara.acm%40gmail.com/public/basic.ics">iCal</a> </p>
+					<center>
+					<p style="float:left;"> View the ACM <a href="https://calendar.google.com/calendar/embed?src=santaclara.acm%40gmail.com&ctz=America%2FLos_Angeles">Google Calendar</a> or download the ACM <a href="https://calendar.google.com/calendar/ical/santaclara.acm%40gmail.com/public/basic.ics">iCal</a> 
+					</p>
+				    </center>
 					<br />
 				</div>
 			</div> 
