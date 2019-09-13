@@ -89,7 +89,7 @@
 					<div id="calendar"></div>
 					<br />
 					<center>
-					<p style="float:left;"> View the ACM <a href="https://calendar.google.com/calendar/embed?src=santaclara.acm%40gmail.com&ctz=America%2FLos_Angeles">Google Calendar</a> or download the ACM <a href="https://calendar.google.com/calendar/ical/santaclara.acm%40gmail.com/public/basic.ics">iCal</a> 
+					<p> View the ACM <a href="https://calendar.google.com/calendar/embed?src=santaclara.acm%40gmail.com&ctz=America%2FLos_Angeles">Google Calendar</a> or download the ACM <a href="https://calendar.google.com/calendar/ical/santaclara.acm%40gmail.com/public/basic.ics">iCal</a> 
 					</p>
 				    </center>
 					<br />
