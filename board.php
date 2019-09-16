@@ -105,7 +105,7 @@
 					<div id="bumper"></div>
 					<h1 class="Club_name">ACM-W Board</h1>
 					<center> <!-- ACM-W Contact Links -->
-						<p> 
+						<p class="acmw"> 
 						<a href="mailto:acmw.scugirls@gmail.com">acmw.scugirls@gmail.com</a> |
 						<a href="https://www.instagram.com/scuacmw/">Instagram</a> |
 						<a href="https://www.facebook.com/groups/acmwscu/">Facebook</a> |
