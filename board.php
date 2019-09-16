@@ -104,6 +104,12 @@
 				<div class="container-fluid">
 					<div id="bumper"></div>
 					<h1 class="Club_name">ACM-W Board</h1>
+					<h2> Connect with the Association for Computing Machinery -- Women's Chapter </h2>
+					<p> Email <a href="mailto:acmw.scugirls@gmail.com">acmw.scugirls@gmail.com</a> |
+					Instagram: @scuacmw |
+					Facebook: <a href="https://www.facebook.com/groups/acmwscu/">Group</a> |
+					SCU: <a href="https://www.scu.edu/engineering/beyond-the-classroom/student-organizations/acm-womens-chapter-acm-w/">Website</a> |
+					<a href="https://calendar.google.com/calendar/b/1?cid=YWNtdy5zY3VnaXJsc0BnbWFpbC5jb20">Google Calendar</a>
 					<hr class="title-divider">
 
 					<cms:pages masterpage="board.php" folder="acmw">
