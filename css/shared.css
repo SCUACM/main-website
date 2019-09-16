@@ -186,9 +186,6 @@ ul {
 	.connect-bubble {
 		width: 40px;
 	}
-	.connect-bubble:hover {
-		color: #232a35;
-	}
 }
 
 .about-pic {
@@ -203,5 +200,9 @@ ul {
 }
 
 a{
+	color: #232a35;
+}
+
+center > p {
 	color: #232a35;
 }
