@@ -86,11 +86,10 @@ h1 {
 
 .Club_name {
 	font-weight: 800;
-	text-align: center;
 	margin-top: 70px;
 	margin-bottom: 25px;
 	font-size: 340%;
-	text-align: center;
+	text-align: center !important;
 }
 
 * {
