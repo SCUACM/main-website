@@ -90,6 +90,7 @@ h1 {
 	margin-bottom: 25px;
 	font-size: 340%;
 	text-align: center !important;
+	position: relative;
 }
 
 * {
