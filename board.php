@@ -69,7 +69,7 @@
 			</div>
 		</nav>
 
-		<!-- <div class="paper"> -->
+		<div class="paper">
 			<div id="wrapper">
 				<!-- ACM Board -->
 				<div class="container-fluid">
@@ -220,7 +220,7 @@
 				<br />
 				<br />
 			</div>
-		<!-- </div> -->
+		</div>
 
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
