@@ -63,7 +63,7 @@ h2 {
 	width: 100%;
 	z-index: 4;
 	top: 300px;
-	margin: 70px auto 25px auto;
+	margin: auto;
 }
 
 .img {
@@ -86,11 +86,10 @@ h1 {
 
 .Club_name {
 	font-weight: 800;
-	margin-top: 70px;
-	margin-bottom: 25px;
 	font-size: 340%;
 	text-align: center !important;
 	position: relative;
+	margin: 70px auto 25px auto;
 }
 
 * {
