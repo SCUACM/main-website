@@ -172,6 +172,8 @@
 				<div class="row">
 					<div class="connect text-center">
 						<h2>Connect with us!</h2>
+						<br />
+						<br />
 					</div>
 					<div class="text-center">
 					<div class="col-xs-0 col-sm-2"></div>
@@ -214,7 +216,6 @@
 					</div>
 					<div class="col-xs-0 col-sm-2"></div>
 				</div>
-				<br />
 				<br />
 				<br />
 				<br />
