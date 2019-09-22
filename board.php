@@ -169,7 +169,6 @@
 				</div>
 			</div>
 				<br />
-				<hr class="title-divider">
 				<div class="row">
 					<div class="connect text-center">
 						<h2>Connect with us!</h2>
@@ -185,7 +184,7 @@
 						<div class="connect-bubble">
 							<a href="https://scuacm.slack.com" target="_blank">
 								<img src="img/logos/logo-slack.png">
-									</a>
+							</a>
 						</div>
 						<div class="connect-bubble">
 							<a href="https://www.instagram.com/scu_acm/" target="_top">
@@ -220,9 +219,6 @@
 				<br />
 				<br />
 				<br />
-			<!-- </div> 
-		</div>--> 
-
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
 </html>
