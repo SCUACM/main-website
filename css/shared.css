@@ -211,6 +211,6 @@ a{
 	background: #232a35;
 }
 
-.collapse.navbar-collapse > a{
+.collapse.navbar-collapse > ul > li > a{
 	text-decoration: none;
 }
