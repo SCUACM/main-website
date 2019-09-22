@@ -167,6 +167,7 @@
 						</cms:if>
 					</cms:pages>
 				</div>
+			</div>
 				<br />
 				<hr class="title-divider">
 				<div class="row">
@@ -219,8 +220,8 @@
 				<br />
 				<br />
 				<br />
-			<!-- </div> --> 
-		</div>
+			<!-- </div> 
+		</div>--> 
 
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
