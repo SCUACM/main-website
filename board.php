@@ -216,11 +216,12 @@
 				</div>
 			</div>
 				 <div class="col-xs-0 col-sm-2"></div>
-				<!--
 				<br />
 				<br />
 				<br />
-				<br /> -->
+				<br />
+				<br />
+				<br />
 		<script type="text/javascript" src="/js/navbar.js"></script>
 	</body>
 </html>
