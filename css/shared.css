@@ -208,5 +208,9 @@ a{
 }
 
 .index{
-	background-color: #232a35;
+	background: #232a35;
+}
+
+#myNavbar > a{
+	text-decoration: none;
 }
