@@ -215,8 +215,8 @@
 					</div>
 				</div>
 			</div>
-				<!-- <div class="col-xs-0 col-sm-2"></div>
-				
+				 <div class="col-xs-0 col-sm-2"></div>
+				<!--
 				<br />
 				<br />
 				<br />
