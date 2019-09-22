@@ -131,7 +131,6 @@
 			</cms:folders>
 
 			<br />
-				<hr class="title-divider">
 				<div class="row">
 					<div class="connect text-center">
 						<h2>Connect with us!</h2>
