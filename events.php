@@ -129,6 +129,59 @@
 					</div>
 				</div>
 			</cms:folders>
+
+			<br />
+				<hr class="title-divider">
+				<div class="row">
+					<div class="connect text-center">
+						<h2>Connect with us!</h2>
+					</div>
+					<div class="text-center">
+					<div class="col-xs-0 col-sm-2"></div>
+					<div class="col-xs-12 col-sm-8">
+						<div class="connect-bubble">
+							<a href="https://www.facebook.com/groups/165822943541098/?ref=br_rs" target="_blank">
+								<img src="img/logos/logo-fb.png">
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://scuacm.slack.com" target="_blank">
+								<img src="img/logos/logo-slack.png">
+									</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://www.instagram.com/scu_acm/" target="_top">
+								<img src="img/logos/logo-instagram.png" height=55px width=60px>
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="mailto:acm@scu.edu" target="_top">
+								<img src="img/logos/logo-email.png">
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://github.com/scuacm" taget="_blank">
+								<img src="img/logos/logo-github.png">
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://discord.gg/ReQTuJD" target="_top">
+								<img src="img/logos/logo-discord.png">
+							</a>
+						</div>
+						<div class="connect-bubble">
+							<a href="https://www.linkedin.com/groups/13597280/" target="_top">
+								<img src="img/logos/logo-linkedin.png">
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-0 col-sm-2"></div>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
 			<br />
 		</div>
 	</div>
