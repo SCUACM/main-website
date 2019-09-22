@@ -200,8 +200,13 @@ ul {
 
 a{
 	color: #232a35;
+	text-decoration: underline;
 }
 
 .acmw{
+	color: #232a35;
+}
+
+.index{
 	color: #232a35;
 }
