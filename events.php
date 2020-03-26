@@ -6,12 +6,12 @@
 		<cms:editable name='image' type='image' />
 		<cms:editable name='description' type='richtext' />
 
-		<cms:folder name="2015" title="2015" />
-		<cms:folder name="2016" title="2016" />
-		<cms:folder name="2017" title="2017" />
-		<cms:folder name="2018" title="2018" />
-		<cms:folder name="2019" title="2019" />
-		<cms:folder name="2019-2020" title="2019-2020" />
+		<cms:folder name="2014 - 2015" title="2014 - 2015" />
+		<cms:folder name="2015 - 2016" title="2015 - 2016" />
+		<cms:folder name="2016 - 2017" title="2016 - 2017" />
+		<cms:folder name="2017 - 2018" title="2017 - 2018" />
+		<cms:folder name="2018 - 2019" title="2018 - 2019" />
+		<cms:folder name="2019 - 2020" title="2019 - 2020" />
 
 </cms:template>
 
