@@ -11,6 +11,8 @@
 		<cms:folder name="2017" title="2017" />
 		<cms:folder name="2018" title="2018" />
 		<cms:folder name="2019" title="2019" />
+		<cms:folder name="2019" title="2019-2020" />
+
 </cms:template>
 
 <!DOCTYPE html>
