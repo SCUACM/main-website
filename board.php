@@ -60,7 +60,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/about">About</a></li>
 						<li><a href="/board">Board</a></li>
-						<li><a href="/broncosec">BroncoSec</a></li>
+						<!-- <li><a href="/broncosec">BroncoSec</a></li> -->
 						<li><a href="/events">Events</a></li>
 						<li><a href="/resources">Resources</a></li>
 						<li><a href="/join">Join</a></li>
