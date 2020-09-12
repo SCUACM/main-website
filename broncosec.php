@@ -78,75 +78,7 @@
 					<h1 class="Club_name">BroncoSec Board</h1>
 					<hr class="title-divider">
 
-					<cms:pages masterpage="board.php" folder="acm">
-						<cms:set boardnum = "<cms:mod k_count '3' />" />
-						<cms:if boardnum == '1'>
-							<div class="row">
-						</cms:if>
-						<div class="col-sm-4 profile">
-							<center><img src="<cms:show image />" class="img-circle prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i><b><cms:show title /></b>
-								<br />
-								<a class="email-link" href="mailto:<cms:show email />"><cms:show name /></a></i>
-							</p>
-							<hr class="prof-line" />
-							<div class="prof-bio center"><cms:show bio /></div>
-							<br />
-							<br />
-						</div>
-						<cms:if (boardnum == '0') || (k_count == k_total_records)>
-							</div>
-						</cms:if>
-					</cms:pages>
-				</div>
-
-				<!-- ACM-W Board -->
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">ACM-W Board</h1>
-					<center> <!-- ACM-W Contact Links -->
-						<p class="acmw"> 
-						<a href="mailto:acmw.scugirls@gmail.com">acmw.scugirls@gmail.com</a> |
-						<a href="https://www.instagram.com/scuacmw/">Instagram</a> |
-						<a href="https://www.facebook.com/groups/acmwscu/">Facebook</a> |
-						<a href="https://www.scu.edu/engineering/beyond-the-classroom/student-organizations/acm-womens-chapter-acm-w/">SCU Website</a> |
-						<a href="https://calendar.google.com/calendar/b/1?cid=YWNtdy5zY3VnaXJsc0BnbWFpbC5jb20">Google Calendar</a> 
-					    </p>
-				    </center>
-					<hr class="title-divider">
-
-					<cms:pages masterpage="board.php" folder="acmw">
-						<cms:set boardnum = "<cms:mod k_count '3' />" />
-						<cms:if boardnum == '1'>
-							<div class="row">
-						</cms:if>
-						<div class="col-sm-4 profile">
-							<center><img src="<cms:show image />" class="img-circle prof-pic" style="height:250px"></center>
-							<p class="prof-title">
-								<i><b><cms:show title /></b>
-								<br />
-								<a class="email-link" href="mailto:<cms:show email />"><cms:show name /></a></i>
-							</p>
-							<hr class="prof-line" />
-							<div class="prof-bio center"><cms:show bio /></div>
-							<br />
-							<br />
-						</div>
-						<cms:if (boardnum == '0') || (k_count == k_total_records)>
-							</div>
-						</cms:if>
-					</cms:pages>
-				</div>
-
-
-				<!-- Chapter Advisor -->
-				<div class="container-fluid">
-					<div id="bumper"></div>
-					<h1 class="Club_name">Chapter Advisor</h1>
-					<hr class="title-divider">
-
-					<cms:pages masterpage="board.php" folder="advisor">
+					<cms:pages masterpage="broncosec.php" folder="acm">
 						<cms:set boardnum = "<cms:mod k_count '3' />" />
 						<cms:if boardnum == '1'>
 							<div class="row">
