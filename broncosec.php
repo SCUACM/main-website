@@ -78,7 +78,7 @@
 					<h1 class="Club_name">BroncoSec Board</h1>
 					<hr class="title-divider">
 
-					<cms:pages masterpage="board.php" folder="acm">
+					<cms:pages masterpage="broncosec.php" folder="">
 						<cms:set boardnum = "<cms:mod k_count '3' />" />
 						<cms:if boardnum == '1'>
 							<div class="row">
